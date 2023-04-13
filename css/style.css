@@ -1,0 +1,93 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 20px solid #00aa00;
+    background: linear-gradient(#02a6cf,#ffffff);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.clouds {
+    position: absolute;
+    bottom: 200;
+    width: 280px;
+    animation: clouds-animation 8s infinite linear;
+}
+.sun {
+    position: absolute;
+    width: 170px;
+    animation: sun-animation 15s infinite linear;
+}
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.4s infinite linear;
+}
+.luffy {
+    position: absolute;
+    bottom: 0px;
+    width: 120px;
+}
+.jump {
+    animation: jump 500ms;
+}
+.gamescore {
+    position: absolute;
+    width: 200px;
+    margin: 20px;
+    right: 10px;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    } to {
+        right: 100%;
+    }
+}
+@keyframes sun-animation {
+    from {
+        left: -80px;
+    } to {
+        left: 100%;
+    }
+}
+@keyframes clouds-animation {
+    from {
+        left: -80px;
+    } to {
+        left: 100%;
+    }
+}
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 250px;
+    }
+    50% {
+        bottom: 250px;
+    }
+    60% {
+        bottom: 250px;
+    }
+    80% {
+        bottom: 200px;
+    }
+    90% {
+        bottom: 100px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
